@@ -28,3 +28,20 @@ ADD COLUMN email VARCHAR(50) UNIQUE;
 ALTER TABLE examples
 ADD COLUMN nationality VARCHAR(30),
 ADD COLUMN AGE INT NOT NULL;
+
+
+-- modify a columns data type
+
+/*
+ALTER TABLE tablename
+ALTER COLUMN columnname TYPE new_data_type;
+*/
+
+ALTER TABLE examples
+ALTER COLUMN nationality TYPE CHAR(3);
+
+SELECT * FROM examples;
+
+ALTER TABLE examples
+ALTER COLUMN last_name TYPE VARCHAR(50),
+ALTER COLUMN email TYPE VARCHAR(80);
