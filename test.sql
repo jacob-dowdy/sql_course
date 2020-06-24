@@ -45,3 +45,18 @@ SELECT * FROM examples;
 ALTER TABLE examples
 ALTER COLUMN last_name TYPE VARCHAR(50),
 ALTER COLUMN email TYPE VARCHAR(80);
+
+-- deleting tables from a database
+
+CREATE TABLE practice (
+
+    id SERIAL PRIMARY KEY,
+    product_name VARCHAR(50),
+    product_price NUMERIC(4,2)
+);
+
+SELECT * FROM practice;
+
+DROP TABLE practice;
+
+
