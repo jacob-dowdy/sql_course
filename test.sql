@@ -99,3 +99,22 @@ WHERE nationality = 'USA';
 UPDATE examples
 SET first_name = 'James', age = 55
 WHERE example_id = 5;
+
+-- Deleting data from a table
+
+/*
+
+DELETE FROM tablename
+WHERE columname = 'value';
+
+*/
+
+DELETE FROM examples
+WHERE example_id = 2;
+
+SELECT * FROM examples;
+
+DELETE FROM examples
+WHERE nationality = 'GBR';
+
+DELETE FROM examples;
