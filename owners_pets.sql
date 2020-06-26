@@ -47,3 +47,13 @@ SELECT * FROM owners;
 
 INSERT INTO pets (species, full_name, age, owner_id)
 VALUES ('Dog', 'Rex', 6, 1),('Rabbit', 'Fluffy', 2, 5),('Cat', 'Tom', 8, 2),('Mouse', 'Jerry', 2, 2),('Dog', 'Biggles', 4, 1),('Tortoise', 'Squirtle', 42, 3);
+
+SELECT * FROM pets;
+
+UPDATE pets
+SET age = 3
+WHERE id = 2;
+
+DELETE FROM owners
+WHERE id = 6;
+
