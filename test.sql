@@ -76,4 +76,26 @@ SELECT * FROM examples;
 INSERT INTO examples (first_name, last_name, email, nationality, age)
 VALUES('Emily','Watson','ewatson@gmail.com','USA',29),('Theo','Scott','tscott@gmail.com','AUS',33),('Emily','Smith','esmith@gmail.com','GBR',29),('Jim','Burr','jburr@gmail.com','USA',54);
 
+-- UPDATE DATA IN A TABLE
 
+/*
+
+UPDATE tablename
+SET coumname = 'newvalue'
+WHERE columname = 'value';
+
+*/
+
+UPDATE examples
+SET email = 'davidmitchell@gmail.com'
+WHERE example_id = 1;
+
+SELECT * FROM examples;
+
+UPDATE examples
+SET nationality = 'CAN'
+WHERE nationality = 'USA';
+
+UPDATE examples
+SET first_name = 'James', age = 55
+WHERE example_id = 5;
