@@ -555,5 +555,14 @@ INSERT INTO movies_actors (actor_id, movie_id) VALUES ('1','52'),
 
 SELECT * FROM movies_actors;
 
+-- Retrieving data with a where clause
+
+/*
+
+SELECT columname FROM tablename
+WHERE columname = 'value';
+
+*/
+
 
 
