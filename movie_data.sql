@@ -564,5 +564,28 @@ WHERE columname = 'value';
 
 */
 
+-- Challenges --
+
+-- 1. Select all English language movies
+SELECT * FROM movies
+WHERE movie_lang > 'English';
+
+-- 2. Select movie name and release date -
+SELECT movie_name, release_date FROM movies;
+
+-- 3. Select the first name and last name of all American directors. --
+SELECT first_name, last_name FROM directors
+WHERE nationality = 'American';
+
+-- 4. Select all male actors born after January 1, 1970. --
+SELECT * FROM actors
+WHERE gender = 'M'
+AND date_of_birth > '1970-01-01';
+
+-- 5. Select the movie name for all English language movies that are longer than 90 minutes. --
+SELECT movie_name FROM movies
+WHERE movie_length > 90
+AND movie_lang = 'English';
+
 
 
