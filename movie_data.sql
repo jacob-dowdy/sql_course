@@ -587,5 +587,28 @@ SELECT movie_name FROM movies
 WHERE movie_length > 90
 AND movie_lang = 'English';
 
+-- Using IN and NOT IN
+
+/* 
+
+SELECT columname1, columname2 FROM tablenameSELECT first_name, last_name FROM actors
+WHERE columname3 IN ('value1','value2');
+
+SELECT columname1, columname2 FROM tablename
+WHERE columname3 NOT IN ('value1','value2');
+
+*/
+
+SELECT first_name, last_name FROM actors
+WHERE first_name IN ('Bruce','John','Peter');
+
+SELECT first_name, last_name FROM actors
+WHERE first_name NOT IN ('Bruce','John','Peter');
+
+SELECT actor_id, first_name, last_name FROM actors
+WHERE actor_id IN (2,3,4,5,6,8);
+
+SELECT actor_id, first_name, last_name FROM actors
+WHERE actor_id NOT IN (2,3,4,5,6,8);
 
 
