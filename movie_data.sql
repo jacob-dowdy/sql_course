@@ -720,3 +720,14 @@ FETCH FIRST 10 ROW ONLY;
 SELECT movie_id, movie_name FROM movies
 OFFSET 8 ROWS
 FETCH FIRST 10 ROW ONLY;
+
+-- Distinct values
+
+/*
+
+SELECT DISTINCT columname FROM tablename;
+
+*/
+
+SELECT DISTINCT * FROM movies
+ORDER BY movie_lang;
