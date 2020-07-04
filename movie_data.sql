@@ -669,3 +669,25 @@ AND date_of_birth BETWEEN '1940-01-01' AND '1969-12-31';
 SELECT first_name, last_name FROM directors
 WHERE nationality IN ('British','French','German')
 AND date_of_birth BETWEEN '1950-01-01' AND '1980-12-31';
+
+-- Ordering the results returned
+
+/*
+
+SELECT columname1, columname2 FROM tablename
+ORDER BY columname3;
+
+*/
+
+SELECT * FROM actors;
+
+SELECT first_name, last_name, date_of_birth FROM actors
+ORDER BY first_name;
+
+SELECT actor_id, first_name, last_name, date_of_birth FROM actors
+ORDER BY actor_id DESC;
+
+SELECT actor_id, first_name, last_name, date_of_birth FROM actors
+WHERE gender = 'F'
+ORDER BY date_of_birth DESC;
+
