@@ -764,3 +764,19 @@ ORDER BY domestic_takings DESC;
 
 SELECT * FROM movie_revenues
 WHERE international_takings IS NULL;
+
+-- Setting a column name alias
+
+/*
+
+SELECT columname AS new_columname FROM tablename;
+
+*/
+
+SELECT last_name AS surname FROM directors;
+
+SELECT last_name AS surname FROM directors
+WHERE last_name LIKE 'A%'
+ORDER BY surname;
+
+SELECT * FROM directors;
