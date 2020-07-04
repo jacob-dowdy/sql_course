@@ -729,5 +729,18 @@ SELECT DISTINCT columname FROM tablename;
 
 */
 
+-- Challenges 3 --
+
 SELECT DISTINCT * FROM movies
 ORDER BY movie_lang;
+
+SELECT first_name, last_name, date_of_birth FROM directors
+WHERE nationality = 'American'
+ORDER BY date_of_birth ASC;
+
+SELECT DISTINCT nationality FROM directors;
+
+SELECT first_name, last_name, date_of_birth FROM actors
+WHERE gender = 'F'
+ORDER BY date_of_birth DESC
+LIMIT 10;
