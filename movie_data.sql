@@ -655,4 +655,17 @@ WHERE movie_length BETWEEN 90 AND 120;
 SELECT movie_name, movie_lang FROM movies
 WHERE movie_lang BETWEEN 'Eo' AND 'Portuguese';
 
+-- More challenges --
 
+SELECT movie_name, movie_lang FROM movies
+WHERE movie_lang IN ('English','Korean','Spanish');
+
+SELECT * FROM actors;
+
+SELECT first_name, last_name FROM actors
+WHERE last_name LIKE 'M%'
+AND date_of_birth BETWEEN '1940-01-01' AND '1969-12-31';
+
+SELECT first_name, last_name FROM directors
+WHERE nationality IN ('British','French','German')
+AND date_of_birth BETWEEN '1950-01-01' AND '1980-12-31';
