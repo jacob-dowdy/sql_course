@@ -691,3 +691,16 @@ SELECT actor_id, first_name, last_name, date_of_birth FROM actors
 WHERE gender = 'F'
 ORDER BY date_of_birth DESC;
 
+-- Limiting the number of records returned
+
+/*
+
+SELECT columname1, columname2 FROM tablename
+LIMIT N;
+
+*/
+
+SELECT * FROM movie_revenues
+ORDER BY revenue_id
+LIMIT 8 OFFSET 2;
+
