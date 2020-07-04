@@ -744,3 +744,23 @@ SELECT first_name, last_name, date_of_birth FROM actors
 WHERE gender = 'F'
 ORDER BY date_of_birth DESC
 LIMIT 10;
+
+-- Dealing with NULL values
+
+/*
+SELECT * FROM tablename
+WHERE columname IS NULL;
+
+SELECT * FROM tablename
+WHERE columname IS NOT NULL;
+*/
+
+SELECT * FROM actors
+WHERE date_of_birth IS NOT NULL;
+
+SELECT * FROM movie_revenues
+WHERE domestic_takings IS NOT NULL
+ORDER BY domestic_takings DESC;
+
+SELECT * FROM movie_revenues
+WHERE international_takings IS NULL;
