@@ -800,4 +800,17 @@ SELECT CONCAT(first_name,' ', last_name) AS full_name FROM actors;
 
 SELECT CONCAT_WS(' ', first_name, last_name, date_of_birth) AS full_name FROM actors;
 
+-- Challenges 4 --
+SELECT * FROM movie_revenues;
+
+SELECT * FROM movie_revenues
+WHERE international_takings IS NOT NULL
+ORDER BY international_takings DESC
+LIMIT 3;
+
+SELECT CONCAT(first_name,' ',last_name) AS full_name FROM directors;
+
+SELECT * FROM actors
+WHERE first_name IS NULL
+OR date_of_birth IS NULL;
 
