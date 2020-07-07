@@ -860,7 +860,14 @@ SELECT MIN(release_date) FROM movies;
 SELECT MAX(movie_name) FROM movies;
 SELECT MIN(movie_name) FROM movies;
 
+-- Aggregate Function : AVG
 
+/*
+SELECT AVG(columname) FROM tablename;
+*/
+
+SELECT AVG(movie_length) FROM movies
+WHERE age_certificate = '18';
 
 
 
