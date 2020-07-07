@@ -814,3 +814,16 @@ SELECT * FROM actors
 WHERE first_name IS NULL
 OR date_of_birth IS NULL;
 
+-- Aggregate Functions : COUNT
+
+/*
+SELECT COUNT(columname) FROM tablename;
+*/
+
+SELECT COUNT(*) FROM movie_revenues;
+
+SELECT COUNT(international_takings) FROM movie_revenues;
+
+SELECT COUNT(*) FROM movies
+WHERE movie_lang = 'English';
+
