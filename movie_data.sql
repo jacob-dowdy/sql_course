@@ -964,3 +964,31 @@ SELECT 8 % 2 AS modulus;
 SELECT * FROM movie_revenues;
 
 SELECT movie_id, (domestic_takings + international_takings) AS total_takings FROM movie_revenues;
+
+-- INNER JOINS: PART 1
+
+/*
+SELECT table1.column1, table1.column2, table2.column1 FROM table1
+INNER JOIN table2 ON table1.column3 = table2.column3;
+*/
+
+select * from directors;
+SELECT * FROM movies;
+
+INSERT INTO directors (first_name, last_name, date_of_birth, nationality)
+VALUES ('Christopher','Nolan','1970-07-30','British');
+
+SELECT directors.director_id, directors.first_name, directors.last_name, movies.movie_name 
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.director_id;
+
+SELECT directors.director_id, directors.first_name, directors.last_name, movies.movie_name 
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.director_id
+WHERE movies.movie_lang = 'Japanese';
+
+SELECT directors.director_id, directors.first_name, directors.last_name, movies.movie_name 
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.director_id
+WHERE movies.movie_lang = 'Japanese'
+ORDER BY movies.movie_length;
