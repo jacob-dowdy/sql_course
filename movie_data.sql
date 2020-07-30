@@ -1014,3 +1014,17 @@ FROM directors d
 INNER JOIN movies mo ON d.director_id = mo.director_id
 WHERE mo.movie_lang = 'Japanese'
 ORDER BY mo.movie_length;
+
+-- INNER JOINS : PART 3
+
+-- ONLY WHEN THE JOINING COLUMNS HAVE THE SAME NAME!
+
+/*
+SELECT t1.column1, t1.column2, t2.column1 FROM table t1
+JOIN table t2 USING (column3);
+*/
+
+SELECT mo.movie_name, mr.domestic_takings FROM movies mo
+JOIN movie_revenues mr USING (movie_id)
+WHERE mo.age_certificate IN ('12','15','18')
+ORDER BY mr.domestic_takings DESC;
