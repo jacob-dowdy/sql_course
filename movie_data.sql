@@ -992,3 +992,25 @@ FROM directors
 INNER JOIN movies ON directors.director_id = movies.director_id
 WHERE movies.movie_lang = 'Japanese'
 ORDER BY movies.movie_length;
+
+-- INNER JOINS : PART 2
+
+/*
+SELECT table1.column1, table1.column2, table2.column1 FROM table1
+INNER JOIN table2 ON table1.column3 = table2.column3;
+
+SELECT t1.column1, t1.column2, t2.column1 FROM table t1
+JOIN table t2 ON t1.column3 = t2.column3;
+*/
+
+SELECT directors.director_id, directors.first_name, directors.last_name, movies.movie_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.director_id
+WHERE movies.movie_lang = 'Japanese'
+ORDER BY movies.movie_length;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name
+FROM directors d
+INNER JOIN movies mo ON d.director_id = mo.director_id
+WHERE mo.movie_lang = 'Japanese'
+ORDER BY mo.movie_length;
