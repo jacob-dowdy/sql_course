@@ -1076,3 +1076,22 @@ SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM movies mo
 RIGHT JOIN directors d on d.director_id = mo.director_id
 WHERE mo.age_certificate = '18';
 
+-- FULL OUTER JOINS
+
+/*
+SELECT t1.column1, t1.column2, t2.column1 FROM table1 t1
+FULL JOIN table2 t2 ON t1.column3 = t2.column3;
+*/
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+FULL JOIN movies mo ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+FULL JOIN movies mo ON d.director_id = mo.director_id
+WHERE mo.movie_lang IN ('German','Korean')
+ORDER BY d.last_name;
+
+
+
+
+
